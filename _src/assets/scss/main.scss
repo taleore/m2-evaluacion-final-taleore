@@ -1,0 +1,16 @@
+.header {
+  background-color: bisque;
+  padding: 20px;
+}
+.main {
+  background-color: aquamarine;
+}
+
+.series__item--favorite {
+  border-color: red;
+  background-color: yellow;
+}
+
+.series__item--favorite .series__name {
+  font-style: italic;
+}
