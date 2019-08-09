@@ -23,6 +23,7 @@
 }
 .series__element {
   list-style: none;
+  padding: 20px;
 }
 
 .series__item--favorite {
@@ -37,7 +38,8 @@
 
 .series__item--favorite .series__name {
   font-style: italic;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .buttom_search {
@@ -45,6 +47,7 @@
   border-radius: 20px;
   font-family: "Indie Flower", cursive;
   font-size: 25px;
+  margin: 10px;
 }
 
 .buttom_serie {
@@ -57,4 +60,5 @@
 
 .series__name {
   font-family: "Indie Flower", cursive;
+  font-size: 20px;
 }

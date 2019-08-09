@@ -19,10 +19,7 @@ const getDatafromServer = ev => {
   return fetch(url)
     .then(response => response.json())
     .then(data => {
-      console.log(
-        "Fetch data from server and return it as JSON >>> Return",
-        data
-      );
+      console.log(data);
       data = formatData(data);
       saveDataInSeries(data);
       paintSeries();
