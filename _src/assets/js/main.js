@@ -5,6 +5,14 @@ const inputUser = document.querySelector(".js-btn-serie");
 let series = [];
 const favorites = [];
 
+const getSeriesFromLocalStorage = () => {
+  return JSON.parse(localStorage.getItem("series"));
+};
+
+const setSeriesIntoLocalStorage = () => {
+  localStorage.setItem("series", JSON.stringify(series));
+};
+
 const getDatafromServer = ev => {
   ev.preventDefault();
   const url = `http://api.tvmaze.com/search/shows?q=${inputUser.value}`;
@@ -19,6 +27,7 @@ const getDatafromServer = ev => {
       saveDataInSeries(data);
       paintSeries();
       listenSeries();
+      getSeriesFromLocalStorage();
     });
 };
 

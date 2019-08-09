@@ -7,20 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="assets/css/main.css">
   <title>Buscador de series</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <h1 class="title">Buscador de series</h1>
+    <h1 class="header_title">Buscador de series</h1>
   </header>
   <main class="main">
-    <form>
-      <label for="js-btn-serie"></label>
-      <input type="text" class="js-btn-serie" name="input__name">
-      <input class="js-btn-search" type="submit" value="Buscar" />
-
-    </form>
-    <ul class="js-list"></ul>
+    <div class="main__search">
+      <h2 class="main_title">Guarda tus series favoritas</h2>
+      <form>
+        <label for="js-btn-serie"></label>
+        <input type="text" class="buttom_serie js-btn-serie" name="input__name">
+        <input class="buttom_search js-btn-search" type="submit" value="Buscar" />
+      </form>
+    </div>
+    <section class="main__favorites">
+      <ul class="js-list"></ul>
+    </section>
   </main>
 
   <script src="assets/js/main.js"></script>

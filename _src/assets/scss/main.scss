@@ -1,9 +1,28 @@
 .header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
   background-color: bisque;
   padding: 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
 }
 .main {
-  background-color: aquamarine;
+  width: 100%;
+  background-color: rgb(134, 188, 209);
+  &__search {
+    padding: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  &_title {
+    font-family: "Indie Flower", cursive;
+    font-size: 25px;
+  }
+}
+.series__element {
+  list-style: none;
 }
 
 .series__item--favorite {
@@ -19,4 +38,23 @@
 .series__item--favorite .series__name {
   font-style: italic;
   font-size: 24px;
+}
+
+.buttom_search {
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+}
+
+.buttom_serie {
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 25px;
+  text-align: center;
+}
+
+.series__name {
+  font-family: "Indie Flower", cursive;
 }
