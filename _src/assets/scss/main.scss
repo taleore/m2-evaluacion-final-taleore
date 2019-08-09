@@ -7,10 +7,16 @@
 }
 
 .series__item--favorite {
-  border-color: red;
-  background-color: yellow;
+  width: 210px;
+  background-color: rgb(177, 109, 109);
+  border: rgb(19, 16, 16) 10px solid;
 }
+
+/*.series__item--favorite .series__image {
+  border: rgb(19, 16, 16) 10px solid;
+}*/
 
 .series__item--favorite .series__name {
   font-style: italic;
+  font-size: 24px;
 }
