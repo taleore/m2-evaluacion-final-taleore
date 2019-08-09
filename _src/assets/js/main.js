@@ -16,7 +16,7 @@ const getDatafromServer = ev => {
       );
       data = formatData(data);
       saveDataInSeries(data);
-      //paintSeries();
+      paintSeries();
     });
 };
 
@@ -38,6 +38,27 @@ const formatData = data => {
 const saveDataInSeries = data => {
   series = data;
   console.log("Save data in series array >> series", series);
+};
+
+const paintSeries = () => {
+  // cojo elemento contenedor del DOM
+  const mainList = document.querySelector(".js-list");
+  // declaramos string vacío para pasarlo por el innerHTML
+  let htmlCode = "";
+  for (
+    let serieIndex = 0;
+    serieIndex < series.length;
+    serieIndex = serieIndex + 1
+  ) {
+    htmlCode += `<div class="series__item js-serie" data-index="${serieIndex}">`;
+    htmlCode += `<img  class="series__image" src="${
+      series[serieIndex].image
+    }" alt="">`;
+    htmlCode += `<p class="series__name">${series[serieIndex].name}</p>`;
+    htmlCode += "</div>";
+  }
+  mainList.innerHTML = htmlCode;
+  console.log("Paint series form `series` array into DOM >>> series:", series);
 };
 
 btn.addEventListener("click", getDatafromServer);
